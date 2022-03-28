@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "node build",
-    "test": "node verify"
+    "test": "node verify",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -20,5 +22,9 @@
   "devDependencies": {
     "adblock-rs": "^0.2.9",
     "tap": "^14.10.7"
+  },
+  "snyk": true,
+  "dependencies": {
+    "@snyk/protect": "latest"
   }
 }
